@@ -1,6 +1,6 @@
 <?php
 if(isset($_REQUEST['s']) && !empty($_REQUEST['s'])) {
-  $string = $_GET['s'];
+  $string = $_REQUEST['s'];
   $map = array(
   "a" => "A",
   "b" => "B",
