@@ -36,6 +36,8 @@ body, textarea {
   top: 20px;
   position: relative;
   left: 15px;
+  display: block;
+  text-indent: -99999px;
 }
 
 .contenedor {
