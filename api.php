@@ -1,5 +1,5 @@
 <?php
-if(isset($_REQUEST['s'])) {
+if(isset($_REQUEST['s']) && !empty($_REQUEST['s'])) {
   $string = $_GET['s'];
   $map = array(
   "a" => "A",

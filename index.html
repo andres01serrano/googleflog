@@ -20,25 +20,42 @@
         </div>
     </div>
     <div class="contenedor">
-        <ul class="idiomas">
-            <li class="text">Traductor</li>
-            <li class="idioma">Del: español ▼</li>
-            <li class="idioma change"><span>&nbsp;</span></li>
-            <li class="idioma">Al: metroflog ▼</li>
-        </ul>
-        <div id="traductor">
-            <div class="traducir">
-                <textarea id="input"></textarea>
-            </div>
-            <div class="traducido">
-                <p id="result"></p>
-                <div class="opciones">
-                    <a id="copiar" href="#" data-clipboard-text="Copy me!">Copiar texto</a><span id="copiado">¡Copiado con éxito!</span>
-                    |
-                    <a id="share" href="#">Tuitear texto</a>
-                </div>
-            </div>
+      <ul class="idiomas">
+          <li class="text">Traductor</li>
+          <li class="idioma">Del: español ▼</li>
+          <li class="idioma change"><span>&nbsp;</span></li>
+          <li class="idioma">Al: metroflog ▼</li>
+      </ul>
+      <p class="idioma info"><a href="#about" id="info">?</a></p>
+      <div id="traductor">
+          <div class="traducir">
+              <textarea id="input"></textarea>
+          </div>
+          <div class="traducido">
+              <p id="result"></p>
+              <div class="opciones">
+                  <a id="copiar" href="#" data-clipboard-text="Copy me!">Copiar texto</a><span id="copiado">¡Copiado con éxito!</span>
+                  |
+                  <a id="share" href="#">Tuitear texto</a>
+              </div>
+          </div>
+      </div>
+      <div id="about">
+        <div class="about">
+          <div class="resumen">
+            <h2>Acerca de</h2>
+            <p>Dada la moda que tienen algunas personas en internet de escribir cómo si les hubieran cortado los dedos y se los hubieran pegado al revés, surge esta parodia de <span>Google Traductor</span> para traducir de idioma español al idioma que utilizan en la red social <span>metroflog</span>.</p><br />
+            <p>Proyecto realizado por <a href="http://twitter.com/kinduff" target="blank">@Kinduff</a> en colaboración de <a href="http://fertavares.co" target="blank">@frgii</a>.</p>
+          </div>
+          <div class="apinfo">
+          <h2>API</h2>
+          <p>La API funciona de modo I/O y es muy sencilla; a través de la siguiente URL se devuelve un string transformado.</p>
+          <p><pre>http://abarcarodriguez.com/googleflog/api.php?s=ejemplo
+  => "** eEjeEmpl0o -- <3"</pre></p>
+          <p>Puedes ver el código en <a href="http://github.com/kinduff/googleflog" target="blank">Github</a>. Pull requests e Issues son bienvenidos.</p>
+          </div>
         </div>
+      </div>
     </div>
     <div id="fb-root"></div>
     <script>

@@ -59,7 +59,16 @@ $(document).on("click", 'a#share', function(e) {
   text = $("#result").text();
   return window.open("http://twitter.com/share?url=" + loc + "&text=" + text, "twitterwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0");
 });
-
+$(document).on("click", "a#info", function(e) {
+  clase = $(this).attr("class");
+  if (clase === "active") {
+    $(this).removeClass("active");
+    $("#about").fadeOut('normal', function() { $("#traductor, .idiomas").fadeIn(); });
+  } else {
+    $(this).addClass("active");
+    $("#traductor, .idiomas").fadeOut('normal', function() { $("#about").fadeIn(); });
+  }
+});
 // Social buttons shit
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 (function(d, s, id) {
