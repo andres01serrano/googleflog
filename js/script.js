@@ -4,7 +4,7 @@ function terminacion () {
 }
 $(document).ready(function(){
   var clip = new ZeroClipboard($("#copiar"), {
-      moviePath: "zero.swf"
+      moviePath: "js/zero.swf"
   });
   clip.on('complete', function (client, args) {
     $("#copiar").hide();
