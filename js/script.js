@@ -3,6 +3,11 @@ function terminacion () {
   return terminaciones[Math.floor(Math.random() * terminaciones.length)];
 }
 $(document).ready(function(){
+  if (window.location.hash === '#about') {
+    $("a#info").addClass("active");
+    $("#traductor, .idiomas").hide();
+    $("#about").show();
+  }
   var clip = new ZeroClipboard($("#copiar"), {
       moviePath: "js/zero.swf"
   });
@@ -60,13 +65,16 @@ $(document).on("click", 'a#share', function(e) {
   return window.open("http://twitter.com/share?url=" + loc + "&text=" + text, "twitterwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0");
 });
 $(document).on("click", "a#info", function(e) {
+  e.preventDefault();
   clase = $(this).attr("class");
   if (clase === "active") {
     $(this).removeClass("active");
     $("#about").fadeOut('normal', function() { $("#traductor, .idiomas").fadeIn(); });
+    window.location.hash = '';
   } else {
     $(this).addClass("active");
     $("#traductor, .idiomas").fadeOut('normal', function() { $("#about").fadeIn(); });
+    window.location.hash = 'about';
   }
 });
 // Social buttons shit
