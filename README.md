@@ -13,6 +13,8 @@ A través del archivo `api.php` se pasa la variable `s` y se obtiene el string t
     api.php?s=kinduff
     => ** Qiiñduff ,.-~ :D
 
+Si quieres formato JSON utiliza: `format=json`.
+
 [Ejemplo online][3]
 
 ## Colaboraciones
