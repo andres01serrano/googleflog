@@ -196,6 +196,7 @@ body, textarea {
   display: none;
   color: #333;
   font-size: 0.8em;
+  text-align: justify;
 }
 #about .about {
   display: table;
@@ -236,4 +237,8 @@ body, textarea {
 }
 #about span {
   color: #000;
+}
+.copyright {
+  font-size: 0.8em;
+  color: gray;
 }
