@@ -46,7 +46,7 @@ body, textarea {
   margin: 0 auto;
 }
 
-#traductor {
+#traductor, .barra {
   display: table;
   border-collapse: separate;
   vertical-align: top;
@@ -115,12 +115,25 @@ body, textarea {
 .traducido .opciones a:hover {
   text-decoration: underline;
 }
-
+.barra .lang {
+  display: table-cell;
+  vertical-align: top;
+  width: 95%;
+  min-width: 95%;
+  max-width: 95%;
+}
+.barra .what {
+  display: table-cell;
+  vertical-align: top;
+  width: 5%;
+  min-width: 5%;
+  max-width: 5%;
+  padding-top: 15px;
+}
 .idiomas {
   list-style: none;
   padding-left: 15px;
   padding-top: 15px;
-  float: left;
 }
 
 .idioma {
@@ -170,9 +183,7 @@ body, textarea {
 .info {
   font-size: 1em;
   position: relative;
-  top: 15px;
-  float: right;
-  right: 15px;
+  right: 0;
 }
 .info #info {
   display: block;
