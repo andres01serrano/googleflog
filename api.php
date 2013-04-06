@@ -1,5 +1,6 @@
 <?php
 if(isset($_REQUEST['s']) && !empty($_REQUEST['s'])) {
+  header('Access-Control-Allow-Origin: *');
   $string = $_REQUEST['s'];
   $map = array(
   "a" => "A",
@@ -34,5 +35,16 @@ if(isset($_REQUEST['s']) && !empty($_REQUEST['s'])) {
   $rand = array_rand($terminaciones, 1);
   $metro = strtr($string, $map);
   $flog = "** ".$metro." ".$terminaciones[$rand];
-  echo utf8_decode($flog);
+
+  if(isset($_REQUEST['format'])){
+    if($_REQUEST['format'] == 'json'){
+      header('Content-type: application/json; charset=utf-8');
+      echo json_encode(array(
+        'message' => $flog
+      ));
+    }
+  }else{
+    header('Content-type: text/plain; charset=utf-8');
+    echo $flog;
+  }
 }
