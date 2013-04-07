@@ -17,6 +17,19 @@ Si quieres formato JSON utiliza: `format=json`.
 
 [Ejemplo online][3]
 
+
+## Ejemplo de uso con jQuery
+    $.getJSON(
+        'http://abarcarodriguez.com/googleflog/api.php',
+        {
+            s: 'Hola, ¿que hacen?',
+            format: 'json'
+        },
+        function(data){
+            alert(data.message);
+        }
+    );
+
 ## Colaboraciones
 Pull requests e Issues son bienvenidos.
 
